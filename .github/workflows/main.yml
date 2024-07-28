@@ -17,12 +17,14 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install dependencies and bundle code
-        env:
-          CI: true
+      - name: Install dependencies (production only)
         run: |
-          npm ci
+          npm install --production
+
+      - name: Install dependencies and bundle code
+        run: |
           zip -r publish.zip ./*
+          
       - name: Deploy to AWS Lambda
         run: |
           aws lambda update-function-code --function-name bookstore-serverless --zip-file fileb://publish.zip --region ap-southeast-1
