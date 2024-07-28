@@ -8,7 +8,6 @@ const path = require("path");
 
 const routes = require("./routes");
 
-// Load environment variables
 dotenv.config({
   path: path.resolve(
     __dirname,
@@ -28,9 +27,8 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
-// Set up routes
 app.get("/", (req, res) => {
-  res.send("Hello World! Serverless function. ci/cd");
+  res.send("Hello World! Serverless function.");
 });
 
 routes.forEach((route) => {
