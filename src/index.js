@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === "development") {
 
 // Set up routes
 app.get("/", (req, res) => {
-  res.send("Hello World! Serverless function.");
+  res.send("Hello World! Serverless function. ci/cd");
 });
 
 routes.forEach((route) => {
