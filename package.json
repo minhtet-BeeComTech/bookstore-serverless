@@ -1,0 +1,27 @@
+{
+  "name": "bookstore-serverless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "NODE_ENV=development nodemon src/index.js",
+    "start:staging": "NODE_ENV=staging nodemon src/index.js",
+    "start:prod": "NODE_ENV=production nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "mongoose": "^8.5.1",
+    "morgan": "^1.10.0",
+    "serverless-http": "^3.2.0"
+  },
+  "devDependencies": {
+    "serverless-offline": "^13.6.0"
+  }
+}
